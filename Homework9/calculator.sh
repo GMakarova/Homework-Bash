@@ -1,12 +1,25 @@
 #!/bin/bash 
 
-echo
-echo ">>Enter input 2 numbers to calculate sum, difference, product and quotient of those 2 numbers<<"
-echo
-read -p "Enter the first number: " num1
-read -p "Enter the second number: " num2
-echo 
-echo "The sum of $num1 + $num2 = $(($num1+$num2))"
-echo "The difference of $num1 - $num2 = $(($num1-$num2))"
-echo "The product of $num1 * $num2 = $(($num1*$num2))"
-echo "The quotient of $num1 / $num2 = $(($num1/$num2))"
+read -p "Enter 1st number: " num1
+read -p "Enter 2nd number: " num2
+
+echo -e "1-addition \n2-substruction \n3-multiplication \n4-division"
+
+read -p "Pick your choice: " choice
+
+if [ $choice -eq 1 ]
+then
+  echo sum is $((num1+num2))
+
+elif [ $choice -eq 2 ]
+then
+  echo difference is $((num1-num2))
+
+elif [ $choice -eq 3 ]
+then
+  echo product is $((num1*num2))
+
+elif [ $choice -eq 4 ]
+then
+  echo quotient is $((num1/num2))
+fi
